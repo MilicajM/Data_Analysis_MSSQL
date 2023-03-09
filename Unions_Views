@@ -1,0 +1,546 @@
+-- Data taken from Zillow from the year 2018 to end of 2022 in monthly fashion
+
+-- Create view for inventory using union on many tables
+
+
+CREATE VIEW inventory AS 
+(
+-- 2018 --
+SELECT *
+FROM dbo.March2018_inventory
+UNION
+SELECT *
+FROM dbo.April2018_inventory
+UNION
+SELECT *
+FROM dbo.May2018_inventory
+UNION
+SELECT *
+FROM dbo.June2018_inventory
+UNION 
+SELECT *
+FROM dbo.July2018_inventory
+UNION
+SELECT *
+FROM dbo.August2018_inventory
+UNION
+SELECT * 
+FROM dbo.September2018_inventory
+UNION
+SELECT *
+FROM dbo.October2018_inventory
+UNION
+SELECT *
+FROM dbo.November2018_inventory
+UNION
+SELECT *
+FROM dbo.December2018_inventory
+UNION 
+-- 2019 --
+SELECT *
+FROM dbo.January2019_inventory
+UNION
+SELECT *
+FROM dbo.February2019_inventory
+UNION
+SELECT *
+FROM dbo.March2019_inventory
+UNION
+SELECT *
+FROM dbo.April2019_inventory
+UNION
+SELECT *
+FROM dbo.May2019_inventory
+UNION
+SELECT *
+FROM dbo.June2019_inventory
+UNION 
+SELECT *
+FROM dbo.July2019_inventory
+UNION
+SELECT *
+FROM dbo.August2019_inventory
+UNION
+SELECT * 
+FROM dbo.September2019_inventory
+UNION
+SELECT *
+FROM dbo.October2019_inventory
+UNION
+SELECT *
+FROM dbo.November2019_inventory
+UNION
+SELECT *
+FROM dbo.December2019_inventory
+UNION 
+-- 2020 --
+SELECT *
+FROM dbo.January2020_inventory
+UNION
+SELECT *
+FROM dbo.February2020_inventory
+UNION
+SELECT *
+FROM dbo.March2020_inventory
+UNION
+SELECT *
+FROM dbo.April2020_inventory
+UNION
+SELECT *
+FROM dbo.May2020_inventory
+UNION
+SELECT *
+FROM dbo.June2020_inventory
+UNION 
+SELECT *
+FROM dbo.July2020_inventory
+UNION
+SELECT *
+FROM dbo.August2020_inventory
+UNION
+SELECT * 
+FROM dbo.September2020_inventory -- this is 2020
+UNION
+SELECT *
+FROM dbo.October2020_inventory
+UNION
+SELECT *
+FROM dbo.November2020_inventory
+UNION
+SELECT *
+FROM dbo.December2020_inventory
+UNION 
+-- 2021 --
+SELECT *
+FROM dbo.January2021_inventory
+UNION
+SELECT *
+FROM dbo.February2021_inventory
+UNION
+SELECT *
+FROM dbo.March2021_inventory
+UNION
+SELECT *
+FROM dbo.April2021_inventory
+UNION
+SELECT *
+FROM dbo.May2021_inventory
+UNION
+SELECT *
+FROM dbo.June2021_inventory
+UNION 
+SELECT *
+FROM dbo.July2021_inventory
+UNION
+SELECT *
+FROM dbo.August2021_inventory
+UNION
+SELECT * 
+FROM dbo.September2021_inventory
+UNION
+SELECT *
+FROM dbo.October2021_inventory
+UNION
+SELECT *
+FROM dbo.November2021_inventory
+UNION
+SELECT *
+FROM dbo.December2021_inventory
+UNION 
+-- 2022 --
+SELECT *
+FROM dbo.January2022_inventory
+UNION
+SELECT *
+FROM dbo.February2022_inventory
+UNION
+SELECT *
+FROM dbo.March2022_inventory
+UNION
+SELECT *
+FROM dbo.April2022_inventory
+UNION
+SELECT *
+FROM dbo.May2022_inventory
+UNION
+SELECT *
+FROM dbo.June2022_inventory
+UNION 
+SELECT *
+FROM dbo.July2022_inventory
+UNION
+SELECT *
+FROM dbo.August2022_inventory
+UNION
+SELECT * 
+FROM dbo.September2022_inventory
+UNION
+SELECT *
+FROM dbo.October2022_inventory
+UNION
+SELECT *
+FROM dbo.November2022_inventory
+)
+
+-- Create view for listing using union on many tables
+
+CREATE VIEW listing AS 
+(
+-- 2018 --
+SELECT *
+FROM dbo.March2018_listing
+UNION
+SELECT *
+FROM dbo.April2018_listing
+UNION
+SELECT *
+FROM dbo.May2018_listing
+UNION
+SELECT *
+FROM dbo.June2018_listing
+UNION 
+SELECT *
+FROM dbo.July2018_listing
+UNION
+SELECT *
+FROM dbo.August2018_listing
+UNION
+SELECT * 
+FROM dbo.September2018_listing
+UNION
+SELECT *
+FROM dbo.October2018_listing
+UNION
+SELECT *
+FROM dbo.November2018_listing
+UNION
+SELECT *
+FROM dbo.December2018_listing
+UNION 
+-- 2019 --
+SELECT *
+FROM dbo.January2019_listing
+UNION
+SELECT *
+FROM dbo.February2019_listing
+UNION
+SELECT *
+FROM dbo.March2019_listing
+UNION
+SELECT *
+FROM dbo.April2019_listing
+UNION
+SELECT *
+FROM dbo.May2019_listing
+UNION
+SELECT *
+FROM dbo.June2019_listing
+UNION 
+SELECT *
+FROM dbo.July2019_listing
+UNION
+SELECT *
+FROM dbo.August2019_listing
+UNION
+SELECT * 
+FROM dbo.September2019_listing
+UNION
+SELECT *
+FROM dbo.October2019_listing
+UNION
+SELECT *
+FROM dbo.November2019_listing
+UNION
+SELECT *
+FROM dbo.December2019_listing
+UNION 
+-- 2020 --
+SELECT *
+FROM dbo.January2020_listing
+UNION
+SELECT *
+FROM dbo.February2020_listing
+UNION
+SELECT *
+FROM dbo.March2020_listing
+UNION
+SELECT *
+FROM dbo.April2020_listing
+UNION
+SELECT *
+FROM dbo.May2020_listing
+UNION
+SELECT *
+FROM dbo.June2020_listing
+UNION 
+SELECT *
+FROM dbo.July2020_listing
+UNION
+SELECT *
+FROM dbo.August2020_listing
+UNION
+SELECT * 
+FROM dbo.September2020_listing -- this is 2020
+UNION
+SELECT *
+FROM dbo.October2020_listing
+UNION
+SELECT *
+FROM dbo.November2020_listing
+UNION
+SELECT *
+FROM dbo.December2020_listing
+UNION 
+-- 2021 --
+SELECT *
+FROM dbo.January2021_listing
+UNION
+SELECT *
+FROM dbo.February2021_listing
+UNION
+SELECT *
+FROM dbo.March2021_listing
+UNION
+SELECT *
+FROM dbo.April2021_listing
+UNION
+SELECT *
+FROM dbo.May2021_listing
+UNION
+SELECT *
+FROM dbo.June2021_listing
+UNION 
+SELECT *
+FROM dbo.July2021_listing
+UNION
+SELECT *
+FROM dbo.August2021_listing
+UNION
+SELECT * 
+FROM dbo.September2021_listing
+UNION
+SELECT *
+FROM dbo.October2021_listing
+UNION
+SELECT *
+FROM dbo.November2021_listing
+UNION
+SELECT *
+FROM dbo.December2021_listing
+UNION 
+-- 2022 --
+SELECT *
+FROM dbo.January2022_listing
+UNION
+SELECT *
+FROM dbo.February2022_listing
+UNION
+SELECT *
+FROM dbo.March2022_listing
+UNION
+SELECT *
+FROM dbo.April2022_listing
+UNION
+SELECT *
+FROM dbo.May2022_listing
+UNION
+SELECT *
+FROM dbo.June2022_listing
+UNION 
+SELECT *
+FROM dbo.July2022_listing
+UNION
+SELECT *
+FROM dbo.August2022_listing
+UNION
+SELECT * 
+FROM dbo.September2022_listing
+UNION
+SELECT *
+FROM dbo.October2022_listing
+UNION
+SELECT *
+FROM dbo.November2022_listing
+)
+
+-- Create view for value using union on many tables
+
+CREATE VIEW value AS 
+(
+-- 2018 --
+SELECT *
+FROM dbo.March2018_value
+UNION
+SELECT *
+FROM dbo.April2018_value
+UNION
+SELECT *
+FROM dbo.May2018_value
+UNION
+SELECT *
+FROM dbo.June2018_value
+UNION 
+SELECT *
+FROM dbo.July2018_value
+UNION
+SELECT *
+FROM dbo.August2018_value
+UNION
+SELECT * 
+FROM dbo.September2018_value
+UNION
+SELECT *
+FROM dbo.October2018_value
+UNION
+SELECT *
+FROM dbo.November2018_value
+UNION
+SELECT *
+FROM dbo.December2018_value
+UNION 
+-- 2019 --
+SELECT *
+FROM dbo.January2019_value
+UNION
+SELECT *
+FROM dbo.February2019_value
+UNION
+SELECT *
+FROM dbo.March2019_value
+UNION
+SELECT *
+FROM dbo.April2019_value
+UNION
+SELECT *
+FROM dbo.May2019_value
+UNION
+SELECT *
+FROM dbo.June2019_value
+UNION 
+SELECT *
+FROM dbo.July2019_value
+UNION
+SELECT *
+FROM dbo.August2019_value
+UNION
+SELECT * 
+FROM dbo.September2019_value
+UNION
+SELECT *
+FROM dbo.October2019_value
+UNION
+SELECT *
+FROM dbo.November2019_value
+UNION
+SELECT *
+FROM dbo.December2019_value
+UNION 
+-- 2020 --
+SELECT *
+FROM dbo.January2020_value
+UNION
+SELECT *
+FROM dbo.February2020_value
+UNION
+SELECT *
+FROM dbo.March2020_value
+UNION
+SELECT *
+FROM dbo.April2020_value
+UNION
+SELECT *
+FROM dbo.May2020_value
+UNION
+SELECT *
+FROM dbo.June2020_value
+UNION 
+SELECT *
+FROM dbo.July2020_value
+UNION
+SELECT *
+FROM dbo.August2020_value
+UNION
+SELECT * 
+FROM dbo.September202_value -- this is 2020
+UNION
+SELECT *
+FROM dbo.October2020_value
+UNION
+SELECT *
+FROM dbo.November2020_value
+UNION
+SELECT *
+FROM dbo.December2020_value
+UNION 
+-- 2021 --
+SELECT *
+FROM dbo.January2021_value
+UNION
+SELECT *
+FROM dbo.February2021_value
+UNION
+SELECT *
+FROM dbo.March2021_value
+UNION
+SELECT *
+FROM dbo.April2021_value
+UNION
+SELECT *
+FROM dbo.May2021_value
+UNION
+SELECT *
+FROM dbo.June2021_value
+UNION 
+SELECT *
+FROM dbo.July2021_value
+UNION
+SELECT *
+FROM dbo.August2021_value
+UNION
+SELECT * 
+FROM dbo.September2021_value
+UNION
+SELECT *
+FROM dbo.October2021_value
+UNION
+SELECT *
+FROM dbo.November2021_value
+UNION
+SELECT *
+FROM dbo.December2021_value
+UNION 
+-- 2022 --
+SELECT *
+FROM dbo.January2022_value
+UNION
+SELECT *
+FROM dbo.February2022_value
+UNION
+SELECT *
+FROM dbo.March2022_value
+UNION
+SELECT *
+FROM dbo.April2022_value
+UNION
+SELECT *
+FROM dbo.May2022_value
+UNION
+SELECT *
+FROM dbo.June2022_value
+UNION 
+SELECT *
+FROM dbo.July2022_value
+UNION
+SELECT *
+FROM dbo.August2022_value
+UNION
+SELECT * 
+FROM dbo.September2022_value
+UNION
+SELECT *
+FROM dbo.October2022_value
+UNION
+SELECT *
+FROM dbo.November2022_value
+)
+
